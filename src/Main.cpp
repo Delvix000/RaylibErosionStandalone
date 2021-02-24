@@ -462,6 +462,7 @@ int main(void)
 			heightmapTexture = LoadTextureFromImage(heightmapImage); // Convert image to texture (VRAM)
 			SetTextureFilter(heightmapTexture, FILTER_BILINEAR);
 			SetTextureWrap(heightmapTexture, WRAP_CLAMP);
+			terrainModel.materials[0].maps[2].texture = heightmapTexture;
 			UnloadImage(heightmapImage); // Unload heightmap image from RAM, already uploaded to VRAM
 
 			if (dropletsSinceLastTreeRegen > spd * 10)
@@ -496,6 +497,7 @@ int main(void)
 			heightmapTexture = LoadTextureFromImage(heightmapImage); // Convert image to texture (VRAM)
 			SetTextureFilter(heightmapTexture, FILTER_BILINEAR);
 			SetTextureWrap(heightmapTexture, WRAP_CLAMP);
+			terrainModel.materials[0].maps[2].texture = heightmapTexture;
 			UnloadImage(heightmapImage); // Unload heightmap image from RAM, already uploaded to VRAM
 
 			GenerateTrees(erosionMaker, mapData, treeTextures, &trees, false);
@@ -542,6 +544,7 @@ int main(void)
 			heightmapTexture = LoadTextureFromImage(heightmapImage); // Convert image to texture (VRAM)
 			SetTextureFilter(heightmapTexture, FILTER_BILINEAR);
 			SetTextureWrap(heightmapTexture, WRAP_CLAMP);
+			terrainModel.materials[0].maps[2].texture = heightmapTexture;
 			UnloadImage(heightmapImage); // Unload heightmap image from RAM, already uploaded to VRAM
 
 			GenerateTrees(erosionMaker, mapData, treeTextures, &trees, false);
