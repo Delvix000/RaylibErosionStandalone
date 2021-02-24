@@ -1,7 +1,7 @@
 #version 100
 
 // Input vertex attributes
-in vec3 vertexPosition;
+attribute vec3 vertexPosition;
 
 // Input uniform values
 uniform mat4 projection;

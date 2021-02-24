@@ -69,7 +69,7 @@ void main()
     float sunStrength = pow(sunDot, 32.0); // sun spot in the sky (intensity relative to fragment)
     //vec4 sunColor = vec4(1.0, 1.0, 0.0, 1.0);
         
-    float gradientHeight = clamp(nFragPosition.y*4.6, 0.0, 1.0); // 3.9 is sky gradient height
+    float gradientHeight = clamp(nFragPosition.y*4.6, 0.0, 1.0); // 4.6 is sky gradient height. higher value -> shorter gradient
     // a sample from first horizontal pixel
     vec4 colorTop = mix(texture2D( texture0, vec2(daytime, 0.25)), texelColorNight, clamp(-daytime*1.5, 0.0, 1.0)); // lerp with night
     // a sample from second horizontal pixel
